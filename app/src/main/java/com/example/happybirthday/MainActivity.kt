@@ -62,17 +62,19 @@ fun GreetingPreview() {
     HappyBirthdayTheme {
         // Greeting("Encarna")
 
-        GreetingText(message = "Happy Birthday Encarna!")
+        GreetingText(message = "Happy Birthday Encarna!",from="From Emma")
     }
 }
 
 @Composable
-fun GreetingText(message: String, modifier: Modifier = Modifier) {
+fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
     Text(
         text = message,
         fontSize = 100.sp,
         lineHeight = 116.5.sp
-
-
+    )
+    Text(
+        text=from,
+        fontSize=36.sp
     )
 }
