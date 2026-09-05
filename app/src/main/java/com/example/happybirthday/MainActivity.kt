@@ -45,11 +45,12 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    GreetingText(
+                    /*GreetingText(
                         "Happy Birthday Enny",
                         "From Mami",
                         modifier = Modifier.padding(8.dp)
-                    )
+                    )*/
+                    GreetingImage(message="Happy Birthday Enny!",from="From Mami")
                 }
             }
         }
@@ -125,5 +126,12 @@ fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) 
     Image(
         painter = image,
         null
+    )
+
+    GreetingText(
+        message=message,
+        from=from,
+        modifier=Modifier.fillMaxSize().padding(8.dp)
+
     )
 }
