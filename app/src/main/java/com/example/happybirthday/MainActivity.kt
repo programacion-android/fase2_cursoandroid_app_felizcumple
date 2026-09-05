@@ -22,6 +22,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -53,7 +54,9 @@ class MainActivity : ComponentActivity() {
                         "From Mami",
                         modifier = Modifier.padding(8.dp)
                     )*/
-                    GreetingImage(message="Happy Birthday Enny!",from="From Mami")
+                    GreetingImage(message= stringResource(R.string.happy_birthday_text),from= stringResource(
+                        R.string.signature_text
+                    ))
                 }
             }
         }
@@ -80,7 +83,10 @@ fun GreetingPreview() {
     HappyBirthdayTheme {
         // Greeting("Encarna")
        // GreetingText(message = "Happy Birthday Encarna!", from = "From Emma")
-       GreetingImage(message = "Happy Birthday Encarna", from="From mami")
+      // GreetingImage(message = "Happy Birthday Encarna", from="From mami")
+        GreetingImage(message= stringResource(R.string.happy_birthday_text),from= stringResource(
+            R.string.signature_text
+        ))
     }
 }
 
@@ -140,7 +146,9 @@ fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) 
     GreetingText(
         message=message,
         from=from,
-        modifier=Modifier.fillMaxSize().padding(8.dp),
+        modifier=Modifier
+            .fillMaxSize()
+            .padding(8.dp),
         textColor=Color.Green
               /*  Commit9-b:  Cambio del color de texto  */
     )
